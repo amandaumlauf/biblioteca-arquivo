@@ -1,8 +1,6 @@
 /*Biblioteca Pessoal
-FunÁ„o: O programa servir· como uma forma do usu·rio controlar seu acervo pessoal de livros. 
-A partir do menu, o usu·rio conseguir· cadastrar novos livros, editar, consultar os livros que j· possui e ver a quantidade.
-Autores: Amanda Umlauf e Jo„o Victor Campregher
-Data: */
+Fun√ß√£o: O programa servir√° como uma forma do usu√°rio controlar seu acervo pessoal de livros. 
+A partir do menu, o usu√°rio conseguir√° cadastrar novos livros, excluir, consultar os livros que j√° possui e ver a quantidade.*/
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -35,7 +33,7 @@ int main(int argc, char *argv[])
         printf("\n\n--------------"
                " BEM-VINDO A SUA BIBLIOTECA "
                "----------------\n");
-        printf("\n\n *Utilize os n˙meros para navegar no menu* \n");
+        printf("\n\n *Utilize os n√∫meros para navegar no menu* \n");
         printf("\n\n-------------------------\n");
         printf("1. ADICIONAR UM LIVRO NOVO\n ");
         printf("2. MOSTRAR LIVROS CADASTRADOS\n");
@@ -95,7 +93,7 @@ void cadastrar()
 	for(i=0;i<1;i++)
 	{
         getchar();
-        printf("INSIRA O N⁄MERO DO LIVRO: ");
+        printf("INSIRA O N√öMERO DO LIVRO: ");
         scanf("%d", &lib[i].num_livro);
         fflush(stdin);
            
@@ -107,11 +105,11 @@ void cadastrar()
         gets(lib[i].autor);
         fflush(stdin);
   
-        printf("INSIRA O N⁄MERO DE P¡GINAS: ");
+        printf("INSIRA O N√öMERO DE P√ÅGINAS: ");
         scanf("%d", &lib[i].pags);
         fflush(stdin);
   
-        printf("VOC  J¡ LEU ESSE LIVRO? (INSIRA NO FORMATO: LIDO/LEITURA PENDENTE) ");
+        printf("VOC√ä J√Å LEU ESSE LIVRO? (INSIRA NO FORMATO: LIDO/LEITURA PENDENTE) ");
         gets(lib[i].livro_lido);
         fflush(stdin);
     
@@ -143,7 +141,7 @@ void visualizar()
 
     for (i = 0; i < cont; i++) {
 
-                printf("\t LIVRO N⁄MERO = %d", lib[i].num_livro);
+                printf("\t LIVRO N√öMERO = %d", lib[i].num_livro);
   
                 printf("\t NOME DO LIVRO = %s", lib[i].nome_livro);
   
@@ -190,7 +188,7 @@ void pesquisa()
         fread(&lib[i],sizeof(cad),1,pArq);
   
         if (strcmp(nome_autor, lib[i].autor) == 0)
-            printf("NOME DO LIVRO: %s  AUTOR: %s  %d P¡GINAS  STATUS: %s",
+            printf("NOME DO LIVRO: %s  AUTOR: %s  %d P√ÅGINAS  STATUS: %s",
                     lib[i].nome_livro,
                     lib[i].autor,
                     lib[i].pags,
